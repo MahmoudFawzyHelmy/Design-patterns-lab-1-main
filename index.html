@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design Patterns Lab - Interactive Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+  <body>
+    <div id="app">
+      <header class="header">
+        <div class="container">
+          <h1 class="title">
+            <i class="fas fa-cube"></i>
+            Design Patterns Lab
+          </h1>
+          <p class="subtitle">Interactive demonstration of TypeScript design patterns</p>
+        </div>
+      </header>
+
+      <main class="main">
+        <div class="container">
+          <div class="patterns-grid">
+            <!-- Singleton Pattern -->
+            <div class="pattern-card" id="singleton-card">
+              <div class="card-header">
+                <i class="fas fa-user-shield"></i>
+                <h3>Singleton Pattern</h3>
+              </div>
+              <div class="card-content">
+                <p>Ensures only one instance of a class exists throughout the application.</p>
+                <div class="demo-controls">
+                  <button class="btn btn-primary" id="create-instance">
+                    <i class="fas fa-plus"></i>
+                    Create Instance
+                  </button>
+                  <button class="btn btn-secondary" id="check-instance">
+                    <i class="fas fa-check"></i>
+                    Check Instance
+                  </button>
+                </div>
+                <div class="output" id="singleton-output"></div>
+              </div>
+            </div>
+
+            <!-- Iterator Pattern -->
+            <div class="pattern-card" id="iterator-card">
+              <div class="card-header">
+                <i class="fas fa-list-ol"></i>
+                <h3>Iterator Pattern</h3>
+              </div>
+              <div class="card-content">
+                <p>Provides a way to access elements of a collection without exposing its underlying representation.</p>
+                <div class="demo-controls">
+                  <div class="input-group">
+                    <input type="number" id="start-value" placeholder="Start" value="1" class="input">
+                    <input type="number" id="end-value" placeholder="End" value="10" class="input">
+                    <input type="number" id="increment" placeholder="Step" value="2" class="input">
+                  </div>
+                  <button class="btn btn-primary" id="generate-sequence">
+                    <i class="fas fa-play"></i>
+                    Generate Sequence
+                  </button>
+                </div>
+                <div class="output" id="iterator-output"></div>
+              </div>
+            </div>
+
+            <!-- Builder Pattern -->
+            <div class="pattern-card" id="builder-card">
+              <div class="card-header">
+                <i class="fas fa-paint-brush"></i>
+                <h3>Builder Pattern</h3>
+              </div>
+              <div class="card-content">
+                <p>Constructs complex objects step by step using a fluent interface.</p>
+                <div class="demo-controls">
+                  <div class="style-controls">
+                    <div class="control-group">
+                      <label>Text Size:</label>
+                      <select id="text-size" class="select">
+                        <option value="12px">Small</option>
+                        <option value="16px" selected>Medium</option>
+                        <option value="20px">Large</option>
+                        <option value="24px">Extra Large</option>
+                      </select>
+                    </div>
+                    <div class="control-group">
+                      <label>Text Color:</label>
+                      <input type="color" id="text-color" value="#ffffff" class="color-input">
+                    </div>
+                    <div class="control-group">
+                      <label>Background:</label>
+                      <input type="color" id="bg-color" value="#1a1a1a" class="color-input">
+                    </div>
+                  </div>
+                  <button class="btn btn-primary" id="apply-style">
+                    <i class="fas fa-magic"></i>
+                    Apply Style
+                  </button>
+                </div>
+                <div class="output" id="builder-output"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <p>&copy; 2024 Design Patterns Lab. Built with TypeScript and modern web technologies.</p>
+        </div>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
