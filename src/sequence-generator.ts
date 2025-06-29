@@ -27,20 +27,21 @@ export function createNumberSequence(
   };
 }
 
-console.log("sequence generator");
+// Remove the console.log statements since they'll be handled by the UI
+// console.log("sequence generator");
 
-const ascendingSequence = createNumberSequence(1, 10, 2);
-let sequenceResult = ascendingSequence.next();
-while (!sequenceResult.completed) {
-  console.log(sequenceResult.value); // 1, 3, 5, 7, 9
-  sequenceResult = ascendingSequence.next();
-}
+// const ascendingSequence = createNumberSequence(1, 10, 2);
+// let sequenceResult = ascendingSequence.next();
+// while (!sequenceResult.completed) {
+//   console.log(sequenceResult.value); // 1, 3, 5, 7, 9
+//   sequenceResult = ascendingSequence.next();
+// }
 
-console.log("_________________");
-const descendingSequence = createNumberSequence(10, 0, -3);
-sequenceResult = descendingSequence.next();
-while (!sequenceResult.completed) {
-  console.log(sequenceResult.value); // 10, 7, 4, 1
-  sequenceResult = descendingSequence.next();
-}
-console.log("_________________");
+// console.log("_________________");
+// const descendingSequence = createNumberSequence(10, 0, -3);
+// sequenceResult = descendingSequence.next();
+// while (!sequenceResult.completed) {
+//   console.log(sequenceResult.value); // 10, 7, 4, 1
+//   sequenceResult = descendingSequence.next();
+// }
+// console.log("_________________");

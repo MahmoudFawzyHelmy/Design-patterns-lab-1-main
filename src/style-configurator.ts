@@ -65,13 +65,14 @@ export class StyleConfigurator {
   }
 }
 
-new StyleConfigurator()
-  .setTextSize("18px")
-  .setTextColor("black")
-  .setBgColor("yellow")
-  .setSpacing("10px")
-  .setMargins("10px")
-  .setOutline("2px dashed red")
-  .setCornerRadius("8px")
-  .build()
-  .display("🎨 Styled Message with Configurator Pattern");
+// Remove the console.log statements since they'll be handled by the UI
+// new StyleConfigurator()
+//   .setTextSize("18px")
+//   .setTextColor("black")
+//   .setBgColor("yellow")
+//   .setSpacing("10px")
+//   .setMargins("10px")
+//   .setOutline("2px dashed red")
+//   .setCornerRadius("8px")
+//   .build()
+//   .display("🎨 Styled Message with Configurator Pattern");
